@@ -1,12 +1,12 @@
-# Markowitz-Quant-Crypto: MPT Portfolio Optimization
+# Markowitz Portfolio Optimization
 
-## Project Description
-This repository implements a **Modern Portfolio Theory (MPT)** framework to identify optimal cryptocurrency allocations. Unlike traditional "buy and hold" strategies, this project uses a statistical approach to balance the high volatility of crypto assets.
+## About
+This project applies Modern Portfolio Theory to find efficient asset allocations. It works with any ticker available on Yahoo Finance, including crypto and B3 stocks, so it can be used to build a crypto portfolio, a basket of Brazilian equities, or a mix of both.
 
-By leveraging a **1,000,000-iteration Monte Carlo simulation**, the engine explores the risk-return landscape of a multi-asset portfolio (BTC, SOL, DOGE, XRP) to find the **Efficient Frontier**.
+A Monte Carlo simulation generates 100,000 random portfolios to map the risk-return space and locate the efficient frontier.
 
-### Key Technical Features:
-* **Statistical Modeling:** Calculates annualized mean returns and the Asset Covariance Matrix to account for inter-token correlations.
-* **Risk Management:** Implements a **40% Concentration Limit** constraint, simulating institutional risk-parity standards to prevent single-asset dependency.
-* **Optimization Metrics:** Identifies the **Maximum Sharpe Ratio** portfolio (highest efficiency).
-* **High-Scale Simulation:** Brute-force optimization via NumPy-accelerated matrix operations.
+### Key features
+* Calculates annualized mean returns and the covariance matrix between assets
+* Applies a 40% concentration limit per asset to force diversification
+* Identifies the portfolio with the highest Sharpe ratio
+* Runs the simulation with NumPy vectorized operations
